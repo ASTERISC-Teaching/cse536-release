@@ -20,6 +20,23 @@ Please reach out to the TAs if you have any installation issues.
 3. Install RISC-V toolchain: `./mac-toolchain.sh`
 4. Add installed binaries to path: `source .add-mac-paths`
 
+#### Installing using package manager
+If installing QEMU and the toolchain from source does not work for you, then do the following steps:
+
+1. Linux/WSL
+    1. sudo apt-get update
+    2. sudo apt-get install git build-essential gdb-multiarch qemu-system-misc gcc-riscv64-linux-gnu binutils-riscv64-linux-gnu 
+2. Mac (work in progress)
+    1. xcode-select --install
+    2. /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    3. // add brew to PATH
+    4. brew tap riscv/riscv
+    5. brew install riscv-tools
+    6. Write the follwing line to ~/.zshrc " export PATH="/opt/homebrew/Cellar/riscv-gnu-toolchain/main/bin:$PATH" "
+    7. source ~/.zshrc
+    8. brew install qemu
+    9. brew link qemu
+
 ## B. Running the xv6 OS
 
 1. Navigate back to main folder and clone the xv6 OS using 
