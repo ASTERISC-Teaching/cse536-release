@@ -29,13 +29,15 @@ If installing QEMU and the toolchain from source does not work for you, then do 
 2. Mac (work in progress)
     1. xcode-select --install
     2. /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-    3. // add brew to PATH
-    4. brew tap riscv/riscv
-    5. brew install riscv-tools
-    6. Write the follwing line to ~/.zshrc " export PATH="/opt/homebrew/Cellar/riscv-gnu-toolchain/main/bin:$PATH" "
-    7. source ~/.zshrc
-    8. brew install qemu
-    9. brew link qemu
+    3. (echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> ~/.zprofile
+    4. eval "$(/opt/homebrew/bin/brew shellenv)"
+    5. brew tap riscv/riscv
+    6. brew install riscv-tools
+    7. Write the follwing line to ~/.zshrc " export PATH="/opt/homebrew/Cellar/riscv-gnu-toolchain/main/bin:$PATH" "
+    8. source ~/.zshrc
+    9. brew install qemu
+    10. brew link qemu
+    11. brew link --overwrite qemu (Run this if you can't link qemu due to any conflicts)
 
 ## B. Running the xv6 OS
 
