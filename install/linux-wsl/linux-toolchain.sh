@@ -15,7 +15,7 @@ pushd ../
     # Go to cloned folder
     pushd riscv-gnu-toolchain
         mkdir -p build
-        ./configure --prefix=$TOOLCHAIN_DIR CC=gcc-10 CPP=g++-10
+        ./configure --prefix=$TOOLCHAIN_DIR
         make -j`nproc`
     popd
 
