@@ -11,7 +11,11 @@ echo "Making a recovery image with $1"
 rm -rf kernel-with-recovery.img
 
 # Get the file size of the bootloader
-file_size=$(stat -c %s "bootloader/bootloader")
+if [[ "$(uname)" = "Darwin" ]]; then
+    file_size=$(stat -f %z "bootloader/bootloader")
+else
+    file_size=$(stat -c %s "bootloader/bootloader")
+fi
 
 # Create an empty recovery image
 dd if=/dev/zero of=kernel-with-recovery.img bs=16777216 count=1
