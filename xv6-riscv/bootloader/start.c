@@ -128,6 +128,10 @@ void start()
   w_mideleg(0xffff);
   w_sie(r_sie() | SIE_SEIE | SIE_STIE | SIE_SSIE);
 
+  // return address fix
+  uint64 addr = (uint64) panic;
+  asm volatile("mv ra, %0" : : "r" (addr));
+
   // switch to supervisor mode and jump to main().
   asm volatile("mret");
 }
