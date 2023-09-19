@@ -1,5 +1,3 @@
 .DS_Store
 /install/riscv-*
 /install/qemu*
-/xv6-riscv
-.vscode
