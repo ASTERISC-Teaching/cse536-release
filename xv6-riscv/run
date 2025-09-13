@@ -13,10 +13,9 @@ if [ "$1" == "gdb" ]; then
     upper=`echo kernel1 | tr '[:lower:]' '[:upper:]'`
 fi
 
-if [ "$1" == "kernel1tamper" ]; then
-    upper=`echo kernel1 | tr '[:lower:]' '[:upper:]'`
-elif [ "$1" == "kernel2tamper" ]; then
-    upper=`echo kernel2 | tr '[:lower:]' '[:upper:]'`
+if [[ "$1" == *tamper ]]; then
+    base="${1%tamper}"
+    upper=`echo $base | tr '[:lower:]' '[:upper:]'`
 else
     upper=`echo $1 | tr '[:lower:]' '[:upper:]'`
 fi
