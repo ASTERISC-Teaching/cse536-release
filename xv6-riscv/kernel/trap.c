@@ -127,7 +127,7 @@ usertrapret(void)
   // and switches to user mode with sret.
   uint64 trampoline_userret = TRAMPOLINE + (userret - trampoline);
   
-  // CSE 536: (Task 2.1.2) - Pass the TID of the current thread in s11
+  // CSE 536: (Task 2.1.2) - Pass the address of the current thread's TRAPFRAME in s11
   
   ((void (*)(uint64))trampoline_userret)(satp);
 }
