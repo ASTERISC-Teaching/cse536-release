@@ -34,6 +34,32 @@ start()
   x |= MSTATUS_MPP_S;
   w_mstatus(x);
 
+ // CSE536: Uncomment to test PMP 
+  // Test 1
+  // w_pmpaddr0(0x0);
+  // w_pmpaddr1(0x00100000 >> 2);
+  // w_pmpcfg0(0x0800);
+
+  // // Test 2
+  //   w_pmpaddr0(0x80000000 >> 2);
+  //   w_pmpaddr1(0x81000000 >> 2);
+  //   w_pmpcfg0(0x0800);
+
+  // // Test 3
+  // w_pmpaddr0(0x00100000 >> 2);
+  // w_pmpaddr1(0x00200000 >> 2);
+  // w_pmpcfg0(0x0800);
+
+  // // Test 4
+  // w_pmpaddr0(0x00200000 >> 2);
+  // w_pmpaddr1(0x00300000 >> 2);
+  // w_pmpcfg0(0x0800);
+
+  // Test 5
+  //w_pmpaddr1(0x80100000 >> 2);
+  // w_pmpcfg0(0x0800);
+
+
   // disable paging for now.
   w_satp(0);
 

@@ -1,0 +1,18 @@
+Created a VM process and allocated memory region (0x0000000080000000 - 0x0000000080400000).
+(PI at 0x000000000000000a) op = 73, rd = b, funct3 = 2, rs1 = 0, uimm = f14
+(PI at 0x000000000000002c) op = 73, rd = f, funct3 = 2, rs1 = 0, uimm = f14
+(PI at 0x0000000000000034) op = 73, rd = f, funct3 = 2, rs1 = 0, uimm = 300
+(PI at 0x0000000000000048) op = 73, rd = 0, funct3 = 1, rs1 = f, uimm = 300
+(PI at 0x000000000000004e) op = 73, rd = 0, funct3 = 1, rs1 = f, uimm = 180
+(PI at 0x0000000000000052) op = 73, rd = 0, funct3 = 1, rs1 = f, uimm = 3b0
+(PI at 0x000000000000005a) op = 73, rd = 0, funct3 = 1, rs1 = f, uimm = 3b1
+(PI at 0x000000000000005e) op = 73, rd = 0, funct3 = 1, rs1 = e, uimm = 3a0
+(PI at 0x000000000000006a) op = 73, rd = 0, funct3 = 1, rs1 = f, uimm = 341
+(PI at 0x0000000000000072) op = 73, rd = 0, funct3 = 1, rs1 = f, uimm = 302
+(PI at 0x0000000000000076) op = 73, rd = 0, funct3 = 1, rs1 = f, uimm = 303
+(PI at 0x000000000000007a) op = 73, rd = f, funct3 = 2, rs1 = 0, uimm = 104
+(PI at 0x0000000000000082) op = 73, rd = 0, funct3 = 1, rs1 = f, uimm = 104
+(PI at 0x0000000000000086) op = 73, rd = 0, funct3 = 0, rs1 = 0, uimm = 302
+Region: 0x0000000000000000 to 0x0000000000100000, Perm: 0x0000000000000008
+Page Fault Occured. Probably due to PMP Violation
+Accessing Address: 0x000000000000041a
